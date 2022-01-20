@@ -37,8 +37,12 @@ public class ArrayStorage {
 
     public void save(Resume r) {
         var index = findIndex(r.getUuid());
-        if (index != -1 || size >= STORAGE_LENGTH) {
+        if (index != -1) {
             System.err.println("It is not possible to save these data or files. They are already in the system!");
+            return;
+        }
+        if (size >= STORAGE_LENGTH) {
+            System.err.println("Array index outside! Or the length of the array is set incorrectly.");
             return;
         }
         storage[size++] = r;
