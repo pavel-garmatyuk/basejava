@@ -45,17 +45,17 @@
     - [Инициализация и загрузка классов](https://www.youtube.com/watch?v=TdvnGw_KcFY) (youtube)
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) [Домашнее задание HW2](https://drive.google.com/open?id=0B_4NpoQW1xfpWUxUVWx5MFpCZkE)
-> Правка к видео: в `ArrayStorage.delete()` вместо `storage[i] = null` нужно записать `storage[size - 1] = null`
+> Правка к видео: в `com.urise.webapp.storage.ArrayStorage.delete()` вместо `storage[i] = null` нужно записать `storage[size - 1] = null`
 
 - Еще раз прочитайте, [как правильно форматировать код](https://topjava.ru/blog/google-java-style-guide)
 - [Настройте IDEA](https://stackoverflow.com/a/30634421) на автоматическое удаление неиспользуемых импортов
 - Поместите классы в пакеты, как это показано в уроке
-- Реализуйте в `ArrayStorage` метод `update(Resume resume)`. Запустите его в `MainTestArrayStorage`
+- Реализуйте в `com.urise.webapp.storage.ArrayStorage` метод `update(com.urise.webapp.model.Resume resume)`. Запустите его в `com.urise.webapp.MainTestArrayStorage`
 - Сделайте проверки в:
    - `get`, `update`, `delete` на наличие резюме в `storage`
    - `save` на отсутствие резюме в `storage`
    - `save` на переполнение `storage`
 - Выводите в консоль информативные предупреждения для указанных выше проверок
-- Устраните дублирование кода в `ArrayStorage`
+- Устраните дублирование кода в `com.urise.webapp.storage.ArrayStorage`
 - Выберите в классе `java.util.Arrays` подходящие методы для реализации `clear()` и `getAll()`
 - В `clear()` очищайте не весь `storage`, а только те ячейки, где хранятся резюме
