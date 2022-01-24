@@ -51,7 +51,7 @@ public class ArrayStorage {
     public Resume get(String uuid) {
         var index = findIndex(uuid);
         if (index == -1) {
-            System.err.println("No resume in the database!");
+            System.err.println("No resume " + uuid + " in the database!");
             return null;
         }
         return storage[index];
@@ -60,7 +60,7 @@ public class ArrayStorage {
     public void delete(String uuid) {
         var index = findIndex(uuid);
         if (index == -1) {
-            System.err.println("It is not possible to delete a void or a non-existent object!");
+            System.err.println("It is not possible to delete " + uuid + " a void or a non-existent object!");
             return;
         }
         System.arraycopy(storage, index + 1, storage, index, size - 1 - index);
