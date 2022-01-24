@@ -59,7 +59,7 @@ public class ArrayStorage {
 
     public void delete(String uuid) {
         var index = findIndex(uuid);
-        if (!storage[index].getUuid().equals(uuid)) {
+        if (index == -1) {
             System.err.println("It is not possible to delete a void or a non-existent object!");
             return;
         }
