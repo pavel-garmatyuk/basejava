@@ -20,7 +20,7 @@ public class ArrayStorage {
     public void update(Resume r) {
         var index = findIndex(r.getUuid());
         if (index == -1) {
-            System.err.println("com.urise.webapp.model.Resume is missing or does not exist!");
+            System.err.println("Resume " + r + " is missing or does not exist!");
             return;
         }
         storage[index] = r;
@@ -38,7 +38,7 @@ public class ArrayStorage {
     public void save(Resume r) {
         var index = findIndex(r.getUuid());
         if (index != -1) {
-            System.err.println("It is not possible to save these data or files. They are already in the system!");
+            System.err.println("It is not possible to save these data or files." + r + " They are already in the system!");
             return;
         }
         if (size >= STORAGE_LENGTH) {
